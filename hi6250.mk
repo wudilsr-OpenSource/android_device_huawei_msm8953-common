@@ -11,6 +11,11 @@ COMMON_PATH := device/huawei/msm8953-common
 PRODUCT_PACKAGES += \
 ￼    libion
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.recovery.qcom.rc
+    
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
