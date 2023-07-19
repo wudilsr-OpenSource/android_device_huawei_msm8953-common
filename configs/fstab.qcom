@@ -15,7 +15,7 @@
 /dev/block/platform/soc/7824900.sdhci/by-name/vendor         /vendor      ext4    ro,barrier=1                               wait,verify,continue
 /dev/block/platform/soc/7824900.sdhci/by-name/product        /product     ext4    ro,barrier=1                               wait,verify,continue
 /dev/block/platform/soc/7824900.sdhci/by-name/version        /version     ext4    ro,barrier=1                               wait,verify,continue
-/dev/block/platform/soc/7824900.sdhci/by-name/userdata      /data        f2fs    nosuid,nodev,noatime,discard,inline_data,inline_xattr     wait,check,fileencryption=aes-256-xts:aes-256-cts
+/dev/block/platform/soc/7824900.sdhci/by-name/userdata      /data        ext4    rw,nosuid,nodev,noatime,user_xattr,acl,barrier=1,data=ordered,noauto_da_alloc,mblk_io_submit,discard     wait,check,fileencryption=aes-256-xts:aes-256-cts
 /dev/block/platform/soc/7824900.sdhci/by-name/cust           /cust        ext4    ro,nosuid,nodev,barrier=1,noauto_da_alloc                              wait,verify,continue
 /dev/block/platform/soc/7824900.sdhci/by-name/patch         /patch_hw     ext4    ro                                         wait,continue
 /dev/block/platform/soc/7824900.sdhci/by-name/cache      /cache      ext4    nosuid,nodev,noatime,barrier=1                              wait,check,continue
