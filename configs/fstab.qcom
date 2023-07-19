@@ -6,6 +6,8 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 #odm,system,vendor early-mount in kernel/arch/arm/boot/dts
 #<src>                                                <mnt_point>  <type>  <mnt_flags and options>                     <fs_mgr_flags>
+/dev/block/platform/soc/7824900.sdhci/by-name/kernel    /boot    emmc    defaults        recoveryonly
+/dev/block/platform/soc/7824900.sdhci/by-name/recovery_ramdisk    /recovery    emmc    defaults        recoveryonly
 /dev/block/platform/soc/7824900.sdhci/by-name/log        /log        vfat    nosuid,nodev,noatime,uid=0,gid=1000,fmask=0002,dmask=0002         wait,check,continue
 /dev/block/platform/soc/7824900.sdhci/by-name/odm      /odm      ext4    ro,nosuid,nodev,barrier=1                              wait,check,verify,continue
 /dev/block/platform/soc/7824900.sdhci/by-name/system         /system      ext4    ro,barrier=1                                wait,continue
@@ -22,7 +24,7 @@
 /dev/block/platform/soc/7824900.sdhci/by-name/modem         /firmware    vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait
 /dev/block/platform/soc/7824900.sdhci/by-name/dsp           /dsp         ext4    ro,nosuid,nodev,barrier=1                   wait
 /devices/soc/7000000.ssusb/7000000.dwc3/*     /storage/usbotg    vfat    nosuid,nodev         wait,voldmanaged=usbotg:auto
-/dev/block/platform/soc/7824900.sdhci/by-name/misc           /misc              emmc    defaults             defaults
+/dev/block/platform/soc/7824900.sdhci/by-name/misc           /misc              emmc    defaults             recoveryonly
 /devices/platform/soc/7000000.ssusb/7000000.dwc3/xhci-hcd.0.auto*  /storage/usbotg  vfat  nosuid,nodev  wait,voldmanaged=usbotg:auto
 /dev/block/platform/soc/7824900.sdhci/by-name/preas          /preas       ext4    ro,barrier=1                                 wait,verify,continue
 /dev/block/platform/soc/7824900.sdhci/by-name/preavs         /preavs      ext4    ro,barrier=1                                 wait,verify,continue
