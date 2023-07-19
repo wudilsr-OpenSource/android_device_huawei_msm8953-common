@@ -33,6 +33,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci slub_min_objects=12 unmovable_isolate1=2:192M,3:224M,4:256M unmovable_isolate2=2:64M,3:80M,4:80M androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz
