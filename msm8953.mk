@@ -14,7 +14,24 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.recovery.qcom.rc
+    init.huawei.audio.rc \
+    init.huawei.camera.rc \
+    init.huawei.device.rc \
+    init.huawei.lcd.rc \
+    init.huawei.os.rc \
+    init.huawei.power.rc \
+    init.huawei.security.rc \
+    init.huawei.target.rc \
+    init.huawei.wcnss.rc \
+    init.hw.debug.rc \
+    init.msm.usb.configfs.rc \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.qti.fm.rc \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd.rc
     
 # Media
 PRODUCT_COPY_FILES += \
