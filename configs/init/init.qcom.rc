@@ -40,6 +40,8 @@ on early-init
 on init
     symlink /dev/block/platform/soc/7824900.sdhci /dev/block/bootdevice
     setprop sys.usb.configfs 1
+    setprop sys.usb.controller qcom-usb-otg
+    
     # Set permissions for persist partition
     mkdir /persist 0771 root system
 
