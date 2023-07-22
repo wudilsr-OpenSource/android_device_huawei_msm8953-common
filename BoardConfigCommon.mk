@@ -55,6 +55,10 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 -
 TARGET_KERNEL_CONFIG := merge_msm8953_64_defconfig
 TARGET_KERNEL_SOURCE := kernel/huawei/msm8953
 
+# Odm
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_ODM := odm
+
 # Partitions
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 4096 # blockdev --getbsz /dev/block/mmcblk0
