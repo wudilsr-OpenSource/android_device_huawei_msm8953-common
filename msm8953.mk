@@ -10,6 +10,10 @@ COMMON_PATH := device/huawei/msm8953-common
 ## Inherit common vendor blobs
 $(call inherit-product, vendor/huawei/msm8953-common/msm8953-common-vendor.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
