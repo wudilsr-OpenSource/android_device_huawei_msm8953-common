@@ -7,6 +7,9 @@
 ## Common Path
 COMMON_PATH := device/huawei/msm8953-common
 
+## Inherit common vendor blobs
+$(call inherit-product, vendor/huawei/msm8953-common/msm8953-common-vendor.mk)
+
 # Graphics
 PRODUCT_PACKAGES += \
 ￼    libion
