@@ -38,6 +38,7 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    setprop sys.usb.configfs 1
     # Set permissions for persist partition
     mkdir /persist 0771 root system
 
