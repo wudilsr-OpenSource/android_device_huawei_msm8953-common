@@ -53,15 +53,18 @@ TARGET_KERNEL_SOURCE := kernel/huawei/msm8953
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 4096 # blockdev --getbsz /dev/block/mmcblk0
 
+# Platform
+TARGET_BOARD_PLATFORM := msm8953
+ARGET_BOARD_PLATFORM_GPU := qcom-adreno506
+
+# Props
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.qcom
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8953
-ARGET_BOARD_PLATFORM_GPU := qcom-adreno506
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS += \
